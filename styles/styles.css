@@ -26,6 +26,7 @@ p {
 
 .banner, .banner a {
     color: white;
+    font-weight: bold;
 }
 
 /*
@@ -109,7 +110,15 @@ header a:focus {
 
 main {
     flex: 1;
+    display: flex;
+    justify-content: space-between;
     margin: 40px;
     background-color: rgba(255,255,255,0.9);
+}
+
+main section {
+    flex: 1;
+    max-height: 200px;
+    border: lightgray dotted 1px;
 }
 
