@@ -15,15 +15,101 @@ h1, h2, nav a, .btn-menu {
 p {
     font-family: "Slabo 27px",Georgia,Times,"Times New Roman",serif; 
 }
-
-body {
-    background-image: url(../images/bg.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    
+.banner {
+    display: flex;
+    flex-direction: column;
+    height: 580px;
+/*    max-height: 80vh;*/
+    background: url(../images/banner.jpg);
+    background-size: cover;
 }
 
-.wrapper {
-    min-height: 100vh;
+.banner, .banner a {
+    color: white;
+}
+
+/*
+header {
     background-color: rgba(0,0,0,0.2);
 }
+*/
+header .sigil {
+    width: 80px;
+    height: 80px;
+}
+
+header .btn-menu {
+    display: none;
+}
+
+header h1{
+    line-height: 100px;
+    min-width: 220px;
+    margin: 0 auto 0 20px;
+    color: white;
+}
+
+header {  
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+header nav {
+    margin-left: auto;
+    width: 480px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    font-size: 1.2rem;
+}
+
+header a:hover,
+header a:active,
+header a:focus {
+	color: white;
+}
+
+.banner .greeting {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.banner .greeting h1,
+.banner .greeting h2 {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 4rem;
+}
+
+.banner .greeting h2 {
+    font-size: 3rem;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main {
+    flex: 1;
+    margin: 40px;
+    background-color: rgba(255,255,255,0.9);
+}
+
