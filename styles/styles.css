@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+html {
+    height: 100%;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+h1, h2, nav a, .btn-menu {
+    font-family: "Cinzel",Georgia,Times,"Times New Roman",serif;
+}
+p {
+    font-family: "Slabo 27px",Georgia,Times,"Times New Roman",serif; 
+}
+
+body {
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+.wrapper {
+    min-height: 100vh;
+    background-color: rgba(0,0,0,0.2);
+}
