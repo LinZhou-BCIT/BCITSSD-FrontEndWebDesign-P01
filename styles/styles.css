@@ -8,7 +8,7 @@ img {
 h1, h2, nav a, .btn-menu, input[type=submit] {
     font-family: "Cinzel",Georgia,Times,"Times New Roman",serif;
 }
-p, label, input, select {
+p, th, td, label, input, select {
     font-family: "Slabo 27px",Georgia,Times,"Times New Roman",serif; 
 }
 
@@ -162,13 +162,19 @@ main.home-main section a p {
     color: #666;
 }
 
-main .form-section {
-    border-radius: 5px;
-    background-color: #DDD;
-    padding: 20px;
+.table-wrapper {
+    overflow-x: auto;
 }
 
-main .form-section .form-row {
+main .table-section,
+main .form-section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #EEE;
+}
+
+.form-row {
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
@@ -181,14 +187,16 @@ main .form-section .form-row {
 
 .form-row input,
 .form-row select {
-    width: 100%;
+    flex: 1;
+    min-width: 200px;
     min-height: 30px;
+    border-radius: 5px;
 }
 
 .form-row input[type=submit] {
-    background-color: #4CAF50;
+    background-color: #0F659E;
     color: white;
-    padding: 15px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
