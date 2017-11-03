@@ -1,20 +1,14 @@
 @charset "utf-8";
 
-/*
-html {
-    height: 100%;
-}
-*/
-
 img {
-	max-width: 100%;
-	height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
-h1, h2, nav a, .btn-menu {
+h1, h2, nav a, .btn-menu, input[type=submit] {
     font-family: "Cinzel",Georgia,Times,"Times New Roman",serif;
 }
-p {
+p, label, input, select {
     font-family: "Slabo 27px",Georgia,Times,"Times New Roman",serif; 
 }
 
@@ -28,36 +22,28 @@ p {
 .banner {
     display: flex;
     flex-direction: column;
+    font-weight: bold;
+}
+
+.home-banner {
     height: 80vh;
     min-height: 400px;
     background: url(../images/banner.jpg);
     background-size: cover;
+    background-position: center center; 
 }
 
-.banner, .banner a {
+.home-banner, .home-banner a {
     color: white;
-    font-weight: bold;
 }
 
-/*
-header {
-    background-color: rgba(0,0,0,0.2);
-}
-*/
-header .sigil {
-    width: 80px;
-    height: 80px;
+.sub-banner, .sub-banner a {
+    color: black;
 }
 
-header .btn-menu {
-    display: none;
-}
-
-header h1{
-    line-height: 100px;
-    min-width: 220px;
-    margin: 0 auto 0 20px;
-    color: white;
+.home-banner header,
+.home-banner .greeting{
+    background-color: rgba(0,0,0,0.2); 
 }
 
 header {  
@@ -65,7 +51,21 @@ header {
     flex-wrap: wrap;
     align-items: center;
     padding: 20px 40px;
-    background-color: rgba(0,0,0,0.2);
+}
+
+header h1{
+    line-height: 100px;
+    min-width: 220px;
+    margin: 0 20px;
+}
+
+header .sigil {
+    width: 60px;
+    height: 80px;
+}
+
+header .btn-menu {
+    display: none;
 }
 
 header nav {
@@ -86,10 +86,10 @@ header nav a {
     font-size: 1.2rem;
 }
 
-header a:hover,
-header a:active,
-header a:focus {
-	color: white;
+.home-banner header a:hover,
+.home-banner header a:active,
+.home-banner header a:focus {
+    color: white;
 }
 
 .banner .greeting {
@@ -97,11 +97,12 @@ header a:focus {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(0,0,0,0.2);
 }
 
 .banner .greeting h1,
-.banner .greeting h2 {
+.banner .greeting h2,
+.banner .greeting p{
+    align-self: center;
     text-align: center;
     margin-bottom: 0;
     font-size: 4rem;
@@ -110,22 +111,98 @@ header a:focus {
 .banner .greeting h2 {
     font-size: 3rem;
 }
-
+.banner .greeting p {
+    max-width: 650px;
+    font-weight: normal;
+    font-size: 1.4rem;
+    color: #666;
+}
 
 main {
     flex: 1;
-    display: flex;
-    justify-content: space-between;
     margin: 0 auto;
     padding: 40px;
-    max-width: 1200px;
-    background-color: rgba(255,255,255,0.9);
+    max-width: 1200px;  
 }
 
-main section {
+main.home-main {
     flex: 1;
-/*    max-height: 200px;*/
-    border: lightgray dotted 1px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
+main.home-main section {
+    flex: 0 1 250px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+main.home-main section a {
+    text-align: center;
+}
+
+main.home-main section a:hover,
+main.home-main section a:active,
+main.home-main section a:focus {
+    text-decoration: none;
+}
+
+main.home-main section a img {
+    max-width: 60%;
+}
+
+main.home-main section a h2 {
+    color: black;
+}
+
+main.home-main section a p {
+    padding: 0 15px;
+    color: #666;
+}
+
+main .form-section {
+    border-radius: 5px;
+    background-color: #DDD;
+    padding: 20px;
+}
+
+main .form-section .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.form-row label {
+    margin: 0;
+    min-width: 80px;
+}
+
+.form-row input,
+.form-row select {
+    width: 100%;
+    min-height: 30px;
+}
+
+.form-row input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+footer {
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+}
 
