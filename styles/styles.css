@@ -163,7 +163,7 @@ main.home-main section a h2 {
 }
 
 main.home-main section a p {
-/*    padding: 0 15px;*/
+    /*    padding: 0 15px;*/
     color: #666;
 }
 
@@ -239,6 +239,9 @@ footer p {
 }
 
 @media only screen and (max-width: 760px) {
+    header {
+        position: relative;
+    }
     header .btn-menu {
         display: block;
         margin-left: auto;
@@ -250,11 +253,31 @@ footer p {
         font-weight: bold;
         cursor: pointer;
     }
-    header nav ul {
-        display: none;
+    header .btn-menu:focus {
+        outline: none;
     }
-    header nav ul.open {
-        display: flex;
+    header nav {
+        position: absolute;
+        width: 90%;
+        max-width: 400px;
+        right: 5%;
+        top: 100px;
+        /*        bottom: 20px;*/
+        visibility: hidden;
+        overflow: hidden;
+        z-index: 1;
+
+        transform: scale(0);
+        transform-origin: 80% 0;
+        transition: transform 0.3s, visibility 0s 0.3s;
+    }
+    header nav ul {
+        flex-direction: column;
+    }
+    header nav.open {
+        visibility: visible;
+        transform: scale(1);
+        transition: transform 0.3s, visibility 0s 0s;
     }
 
 }
