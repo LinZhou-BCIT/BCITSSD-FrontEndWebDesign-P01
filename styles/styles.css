@@ -17,53 +17,52 @@ p, th, td, label, input, select {
     flex-direction: column;
     min-height: 100vh;
     width: 100%;
+    min-width: 320px;
     margin: 0 auto;
 }
 
 .banner {
     display: flex;
     flex-direction: column;
+    padding: 20px 40px;
     font-weight: bold;
 }
 
 .home-banner {
     height: 75vh;
     min-height: 400px;
-    background: url(../images/banner.jpg);
+    /*  https://css-tricks.com/tinted-images-multiple-backgrounds/   */
+    background: 
+        linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+        url(../images/banner.jpg);
     background-size: cover;
     background-position: center center; 
 }
 
 .home-banner, 
-.home-banner a, 
-.home-banner button {
+.home-banner a {
     color: white;
 }
 
-.sub-banner, .sub-banner a {
+.sub-banner, 
+.sub-banner a {
     color: black;
-}
-
-.home-banner header,
-.home-banner .greeting{
-    background-color: rgba(0,0,0,0.2); 
 }
 
 header {  
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 20px 40px;
-}
-
-header h1{
-    line-height: 100px;
-    min-width: 220px;
-    margin: 0 20px;
+    margin-bottom: 40px;
 }
 
 header .emblem {
     max-height: 80px;
+}
+
+header h1{
+    line-height: 100px;
+    margin: 0 20px;
 }
 
 header .btn-menu {
@@ -81,13 +80,12 @@ header nav {
 
 header nav ul {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     height: 100%;
     width: 100%;
-    list-style: none;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 header nav a {
@@ -105,7 +103,6 @@ header nav a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px 40px;
 }
 
 .banner .greeting h1,
@@ -114,9 +111,11 @@ header nav a {
     align-self: center;
     text-align: center;
     margin-bottom: 0;
-    font-size: 4rem;
 }
 
+.banner .greeting h1 {
+    font-size: 4rem;
+}
 .banner .greeting h2 {
     font-size: 3rem;
 }
@@ -172,7 +171,7 @@ main.home-main section a p {
     color: #666;
 }
 
-.table-wrapper {
+main .table-wrapper {
     overflow-x: auto;
     width: 100%;
 }
@@ -192,6 +191,10 @@ th, td {
 
 tr:nth-child(even) {
     background-color: #DDD;
+}
+.table-section p {
+    margin: 0;
+    text-align: right
 }
 
 .form-row {
@@ -214,18 +217,18 @@ tr:nth-child(even) {
 }
 
 .form-row input[type=submit] {
-    background-color: #0F659E;
-    color: white;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    background-color: #0F659E;
+    color: white;
     font-weight: bold;
+    cursor: pointer;
 }
 
 footer {
     padding: 20px;
-    background-color: black;
+    background-color: #666;
     color: white;
 }
 
@@ -234,16 +237,22 @@ footer p {
     text-align: center;
 }
 
+footer a,
+footer a:hover {
+    color: white;
+}
+
 @media only screen and (max-width: 900px) {
     header {
-        padding-bottom: 0;
+        margin-bottom: 10px;
     }
     header nav {
         width: 100%;
         background-color: rgba(0,0,0,0.2);
     }
     main.home-main section {
-        flex: 1 1 300px;
+        flex: 1 1 320px;
+        max-width: 400px;
     }
 }
 
@@ -305,7 +314,7 @@ footer p {
 }
 
 @media only screen and (max-width: 540px) {
-    header {
+    .banner {
         padding: 10px 20px;
     }
     header .emblem{
@@ -316,7 +325,6 @@ footer p {
         line-height: 80px;
         font-size: 1.7rem;
     }
-    .banner .greeting,
     main {
         padding: 0 25px;
     }
