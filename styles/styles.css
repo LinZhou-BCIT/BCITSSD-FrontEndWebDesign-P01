@@ -171,6 +171,10 @@ main.home-main section a p {
     color: #666;
 }
 
+main article section p {
+/*    max-width: 80%*/
+}
+
 main .table-wrapper {
     overflow-x: auto;
     width: 100%;
