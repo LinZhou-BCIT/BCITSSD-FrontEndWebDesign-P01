@@ -27,7 +27,7 @@ p, th, td, label, input, select {
 }
 
 .home-banner {
-    height: 80vh;
+    height: 75vh;
     min-height: 400px;
     background: url(../images/banner.jpg);
     background-size: cover;
@@ -70,6 +70,10 @@ header .btn-menu {
     display: none;
 }
 
+header nav ul li:first-child {
+    display: none;
+}
+
 header nav {
     margin-left: auto;
     width: 480px;
@@ -79,6 +83,7 @@ header nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    height: 100%;
     width: 100%;
     list-style: none;
     margin: 0;
@@ -100,7 +105,7 @@ header nav a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 40px;
+    padding: 20px 40px;
 }
 
 .banner .greeting h1,
@@ -185,6 +190,10 @@ th, td {
     text-align: center;
 }
 
+tr:nth-child(even) {
+    background-color: #DDD;
+}
+
 .form-row {
     display: flex;
     flex-wrap: wrap;
@@ -238,17 +247,21 @@ footer p {
     }
 }
 
-@media only screen and (max-width: 760px) {
-    header {
-        position: relative;
-    }
+@media only screen and (max-width: 750px) {
     header .btn-menu {
+        position: fixed;
+        bottom: 20px;
+        right: 5%;
+        z-index: 2;
+
         display: block;
-        margin-left: auto;
-        width: 60px;
-        height: 100px;
-        background-color: transparent;
+        width: 44px;
+        height: 44px;
+        background-color: rgba(0,0,0,0.4);
         border: none;
+        border-radius: 5px;
+
+        color: white;
         font-size: 2rem;
         font-weight: bold;
         cursor: pointer;
@@ -257,32 +270,41 @@ footer p {
         outline: none;
     }
     header nav {
-        position: absolute;
-        width: 90%;
-        max-width: 400px;
+        position: fixed;
         right: 5%;
-        top: 100px;
-        /*        bottom: 20px;*/
-        visibility: hidden;
-        overflow: hidden;
+        bottom: 20px;
+        height: 200px;
+        width: 90%;
+        max-width: 300px;
         z-index: 1;
+        padding: 15px;
 
+        background-color: rgba(0,0,0,0.7);
+        border-radius: 5px;
+
+        visibility: hidden;
         transform: scale(0);
-        transform-origin: 80% 0;
+        transform-origin: 100% 100%;
         transition: transform 0.3s, visibility 0s 0.3s;
-    }
-    header nav ul {
-        flex-direction: column;
     }
     header nav.open {
         visibility: visible;
         transform: scale(1);
         transition: transform 0.3s, visibility 0s 0s;
     }
-
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li:first-child {
+        display: block;
+    }
+    .sub-banner nav a {
+        color: white;
+    }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 540px) {
     header {
         padding: 10px 20px;
     }
@@ -291,11 +313,21 @@ footer p {
     }
     header h1 {
         min-width: inherit;
+        line-height: 80px;
         font-size: 1.7rem;
     }
     .banner .greeting,
     main {
-        padding: 25px;
+        padding: 0 25px;
+    }
+    .banner .greeting h1 {
+        font-size: 12vw;
+    }
+    .banner .greeting h2 {
+        font-size: 9vw;
+    }
+    .banner .greeting p {
+        font-size: 1.2rem;
     }
 
 }

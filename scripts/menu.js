@@ -1,6 +1,5 @@
-// JavaScript Document
-
-const $btn = document.getElementById('btn-menu');
-const $navList = document.getElementById('nav-list');
-
-$btn.addEventListener('click', () => $navList.classList.toggle('open'));
+onload = function() {
+    document.getElementsByClassName('btn-menu')[0].onclick = function() {
+        document.getElementsByTagName('nav')[0].classList.toggle('open');
+    }
+}
