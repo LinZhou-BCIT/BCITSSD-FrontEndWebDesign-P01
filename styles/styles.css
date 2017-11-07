@@ -8,7 +8,7 @@ img {
 h1, h2, nav a, .btn-menu, input[type=submit] {
     font-family: "Cinzel",Georgia,Times,"Times New Roman",serif;
 }
-p, th, td, label, input, select {
+p, figcaption, th, td, label, input, select {
     font-family: "Slabo 27px",Georgia,Times,"Times New Roman",serif; 
 }
 
@@ -171,8 +171,33 @@ main.home-main section a p {
     color: #666;
 }
 
-main article section p {
-/*    max-width: 80%*/
+main article section {
+    padding: 0 40px;
+}
+
+main article .fig-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+main article figure {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #EEE;
+    text-align: center;
+}
+
+main article figure.overflow-fig img {
+    max-width: none;
+}
+
+main article figure.overflow-fig {
+    overflow-x: auto;
 }
 
 main .table-wrapper {
@@ -314,6 +339,9 @@ footer a:hover {
     }
     .sub-banner nav a {
         color: white;
+    }
+    main article section {
+        padding: 0 10px;
     }
 }
 
