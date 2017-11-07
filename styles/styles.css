@@ -120,7 +120,8 @@ header nav a {
     font-size: 3rem;
 }
 .banner .greeting p {
-    max-width: 650px;
+    max-width: 720px;
+    padding: 0 40px;
     font-weight: normal;
     font-size: 1.4rem;
     color: #666;
@@ -340,7 +341,8 @@ footer a:hover {
     .sub-banner nav a {
         color: white;
     }
-    main article section {
+    main article section,
+    .banner .greeting p {
         padding: 0 10px;
     }
 }
@@ -369,5 +371,4 @@ footer a:hover {
     .banner .greeting p {
         font-size: 1.2rem;
     }
-
 }
